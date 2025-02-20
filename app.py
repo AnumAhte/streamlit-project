@@ -3,8 +3,9 @@ import pandas as pd
 import plotly.express as px
 from io import BytesIO
 
-# 🎨 Custom Styling
+# 🎨 Custom Styling & Hide Streamlit Menu/Header/Footer
 st.set_page_config(page_title="📊 Data Manager", layout="wide")
+
 st.markdown(
     """
     <style>
@@ -13,6 +14,11 @@ st.markdown(
         h1 { color: #6a1b9a; text-align: center; font-family: 'Arial', sans-serif; }
         .stButton>button { background: linear-gradient(45deg, #6a1b9a, #9c27b0); color: white; border-radius: 8px; }
         .stSidebar { background-color: #e1bee7; padding: 15px; border-radius: 10px; }
+
+        /* Hide Streamlit Header, Footer, and Menu */
+        header {visibility: hidden;}
+        #MainMenu {visibility: hidden;}
+        footer {visibility: hidden;}
     </style>
     """,
     unsafe_allow_html=True,
